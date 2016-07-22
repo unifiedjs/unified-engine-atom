@@ -1,0 +1,19 @@
+{
+  "name": "engine-example",
+  "private": true,
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {},
+  "keywords": [],
+  "license": "MIT",
+  "engines": {},
+  "dependencies": {},
+  "devDependencies": {},
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "1.0.0": "provideLinter"
+      }
+    }
+  }
+}
