@@ -49,7 +49,6 @@
       "github",
       "lint",
       "validate-links"
-
     ],
     "settings": {
       "bullet": "*"

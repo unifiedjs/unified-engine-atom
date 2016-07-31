@@ -58,7 +58,8 @@ describe('unified-engine-atom', function () {
             '<span class="badge badge-flexible">remark-lint:' +
               'no-consecutive-blank-lines</span> Remove 1 line ' +
               'before node',
-            'Link to unknown heading: <code>heading</code>'
+            '<span class="badge badge-flexible">remark-validate-links' +
+              '</span> Link to unknown heading: <code>heading</code>'
           ].join('\n'));
         })
         .then(function () {
