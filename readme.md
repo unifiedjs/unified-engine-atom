@@ -86,8 +86,6 @@ a fatal `Error`.
 
 ## Todo
 
-*   [ ] If anyone knows how to get rid of Jasmine in Atom tests, I’d
-    love to hear about it.
 *   [ ] If anyone knows how to add coverage to Atom tests, I’d love to
     hear about it.
 

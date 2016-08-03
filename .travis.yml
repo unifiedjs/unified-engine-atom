@@ -8,8 +8,7 @@ node_js:
 os:
 - linux
 - osx
-script: curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh
-  | sh
+script: https://raw.githubusercontent.com/Arcanemagus/ci/atomlinter/build-package.sh | sh
 addons:
   apt:
     packages:
