@@ -72,7 +72,9 @@ function atomEngine(options) {
     return new Promise((resolve, reject) => {
       file.contents = editor.getText();
 
-      process.chdir(cwd);
+      try {
+        process.chdir(cwd);
+      } catch (err) { /* empty */ }
 
       engine(xtend(options, {
         output: false,
