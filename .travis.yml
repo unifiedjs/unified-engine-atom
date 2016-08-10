@@ -1,6 +1,5 @@
 language: node_js
 node_js:
-- '0.11'
 - '0.12'
 - '4.0'
 - '5.0'
@@ -8,19 +7,7 @@ node_js:
 os:
 - linux
 - osx
-script: https://raw.githubusercontent.com/Arcanemagus/ci/atomlinter/build-package.sh | sh
-addons:
-  apt:
-    packages:
-    - build-essential
-    - git
-    - libgnome-keyring-dev
-    - fakeroot
-deploy:
-  provider: npm
-  email: tituswormer@gmail.com
-  api_key:
-    secure: AyPGTjGDLimL2AGTwh+IGIEiTPyiqilryk82cy3BESliTzK9sqlr8YNm6tzqArH13z6uV7L4OTSjUm8C/Me+KNXEotggMmTnqvuRlWu8bugydT9FKRgCOiFzodgFZrm4j5s9QRbUDVDlkhuifoBOsbtp0Tzuv1MqNDHWpEPuKo/PTbzrZgmIbQS3FgmBULA/4v8ZZ+QQRtKPycKzcAK2D96bfQM/grEZ4U8VreUPe8jH7EY2iA32DtXzFTs7gkef6Yd0WPF6Sgt7/Ox7FkTSEp1nF7MLWQNW/zHiWdBLBeWo/yX+4nRQhPZGo8D22n/WLUCzr1YGwkVYBr2T7WJh7JfRqaEEfkSn0cAHA7tvnxTu0KdmP0ICuvhiX58Vpjwq0tnFL1qqO4tLlZzJoanK5NGhgSL0yMLBhxlrCi6ukEpypFlcX425ty1z7C6RsqznNyK3X5KHtx23S9OPAG95fyS1f9mNNTN5TraUB2PDD3ER3lh9CK9KxCiu+YW/tdpVF74tt4mk2BNH0VjFlkNhL06TzSdQtMYuv0G+VgLwIRU4AqCxQ7ubROV895jbi3aylPPn7Rf0yxxYP+lnE3vjzbcGSVBzPYHbwUrK9mDF21o9/fdvR0ccULbqIUmrESb4QiaL2VOq4pNE+1Hcg02Fw7YXjnzdRIRYnNs0u/27dWI=
-  on:
-    tags: true
-    node: '5.0'
+script:
+- bash <(curl -s https://raw.githubusercontent.com/wooorm/atom-travis/master/install.sh)
+- export DISPLAY=":99"
+- npm test
