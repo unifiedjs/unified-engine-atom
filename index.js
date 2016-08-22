@@ -105,9 +105,15 @@ function atomEngine(options) {
  * @return {Object} - Linter error.
  */
 function transform(message) {
-  var label = [message.source, message.ruleId].filter(Boolean).join(':');
+  var label = [message.source, message.ruleId].filter(Boolean);
   var text = message.stack || undefined;
   var html;
+
+  if (label[0] && label[0] === label[1]) {
+    label.pop();
+  }
+
+  label = label.join(':');
 
   if (!text) {
     html = message.reason.replace(/`([^`]+)`/g, '<code>$1</code>');
