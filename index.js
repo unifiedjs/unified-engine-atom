@@ -9,7 +9,6 @@
 'use strict';
 
 /* global atom */
-/* eslint-env node */
 
 /* Dependencies. */
 var path = require('path');
@@ -21,6 +20,8 @@ var engine = require('unified-engine');
 
 /* Expose. */
 module.exports = atomEngine;
+
+var CODE = '<code>$1</code>';
 
 /**
  * `lint`.
@@ -116,7 +117,9 @@ function transform(message) {
   label = label.join(':');
 
   if (!text) {
-    html = message.reason.replace(/`([^`]+)`/g, '<code>$1</code>');
+    html = message.reason
+      .replace(/`([^`]+)`/g, CODE)
+      .replace(/“([^”]+)”/g, CODE);
 
     if (label) {
       html = '<span class="badge badge-flexible">' + label + '</span> ' +
