@@ -128,15 +128,14 @@ function transform(message) {
   }
 
   return {
-    type: 'Error',
+    type: {
+      true: 'Error',
+      false: 'Warning',
+      null: 'Info',
+      undefined: 'Info'
+    }[message.fatal],
     filePath: this.getPath(),
     range: toRange(message.location),
-    severity: {
-      true: 'error',
-      false: 'warning',
-      null: 'info',
-      undefined: 'info'
-    }[message.fatal],
     html: html,
     text: text
   };
