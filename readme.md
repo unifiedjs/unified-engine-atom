@@ -1,14 +1,12 @@
 # unified-engine-atom [![Build Status][travis-badge]][travis]
 
-<!--lint disable heading-increment no-duplicate-headings list-item-spacing-->
-
 Interface for creating [Atom Linter][linter]s around
 [**unified**][unified] processors.  Wrapper around the
 [**engine**][engine] to run it from Atom.
 
 ## Installation
 
-[npm][npm-install]:
+[npm][]:
 
 ```bash
 npm install unified-engine-atom
@@ -17,10 +15,8 @@ npm install unified-engine-atom
 ## Usage
 
 ```js
-/* Dependencies. */
 var engine = require('unified-engine-atom');
 
-/* Expose. */
 module.exports.provideLinter = function () {
   return {
     grammarScopes: ['source.gfm', 'source.pfm', 'text.md'],
@@ -99,7 +95,7 @@ a fatal `Error`.
 
 [travis]: https://travis-ci.org/wooorm/unified-engine-atom
 
-[npm-install]: https://docs.npmjs.com/cli/install
+[npm]: https://docs.npmjs.com/cli/install
 
 [license]: LICENSE
 
