@@ -1,16 +1,7 @@
-/**
- * @author Titus Wormer
- * @copyright 2016 Titus Wormer
- * @license MIT
- * @module unified-engine-atom
- * @fileoverview Create Atom Linters for unified processors.
- */
-
 'use strict';
 
 /* global atom */
 
-/* Dependencies. */
 var path = require('path');
 var PassThrough = require('stream').PassThrough;
 var xtend = require('xtend');
@@ -23,24 +14,13 @@ module.exports = atomEngine;
 
 var CODE = '<code>$1</code>';
 
-/**
- * `lint`.
- *
- * @return {LinterConfiguration}
- */
+/* `lint`. */
 function atomEngine(options) {
   return lint;
 
-  /**
-   * Handle on-the-fly or on-save (depending on the
+  /* Handle on-the-fly or on-save (depending on the
    * global atom-linter settings) events.
-   *
-   * @see https://github.com/atom-community/linter/wiki/Linter-API#messages
-   *
-   * @param {AtomTextEditor} editor
-   * @return {Promise.<Messages, Error>} - Promise
-   *  resolved with a list of linter-errors or an error.
-   */
+   * See https://github.com/atom-community/linter/wiki/Linter-API#messages */
   function lint(editor) {
     var filePath = editor.getPath();
     var projects = atom.project.getPaths();
@@ -96,15 +76,7 @@ function atomEngine(options) {
   }
 }
 
-/**
- * Transform VFile messages
- * nested-tuple.
- *
- * @see https://github.com/wooorm/vfile#vfilemessage
- *
- * @param {VFileMessage} message - Virtual file error.
- * @return {Object} - Linter error.
- */
+/* Transform VFile messages nested-tuple. */
 function transform(message) {
   var label = [message.source, message.ruleId].filter(Boolean);
   var text = message.stack || undefined;
@@ -141,13 +113,8 @@ function transform(message) {
   };
 }
 
-/**
- * Transform a (stringified) vfile range to a linter
- * nested-tuple.
- *
- * @param {Object} location - Positional information.
- * @return {Array.<Array.<number>>} - Linter range.
- */
+/* Transform a (stringified) vfile range to a linter
+ * nested-tuple. */
 function toRange(location) {
   var result = [[
     Number(location.start.line) - 1,

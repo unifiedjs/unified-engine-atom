@@ -1,21 +1,11 @@
-/**
- * @author Titus Wormer
- * @copyright 2016 Titus Wormer
- * @license MIT
- * @module unified-engine-atom
- * @fileoverview Test suite for `unified-engine-atom`.
- */
-
 'use strict';
 
 /* global atom */
 
-/* Dependencies. */
 var path = require('path');
 var test = require('tape');
 var lint = require('./engine-example');
 
-/* Methods. */
 var join = path.join;
 
 test('unified-engine-atom', function (t) {
