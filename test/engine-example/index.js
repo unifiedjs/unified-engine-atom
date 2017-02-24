@@ -15,8 +15,7 @@ function linter() {
       rcName: '.remarkrc',
       packageField: 'remarkConfig',
       ignoreName: '.remarkignore',
-      pluginPrefix: 'remark',
-      presetPrefix: 'remark-preset'
+      pluginPrefix: 'remark'
     })
   };
 }

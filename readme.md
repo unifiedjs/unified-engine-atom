@@ -70,8 +70,6 @@ about linters in the [Linter-API Wiki][wiki].
     — Map of plug-in names or paths and options to use.
 *   [`pluginPrefix`][plugin-prefix] (`string`, optional)
     — When given, optional prefix to use when searching for plug-ins.
-*   [`injectedPlugins`][injected-plugins] (`Array`, optional)
-    — List of loaded plug-ins to use.
 
 ###### Returns
 
@@ -136,5 +134,3 @@ a fatal `Error`.
 [plugin-prefix]: https://github.com/wooorm/unified-engine/blob/master/doc/options.md#optionspluginprefix
 
 [plugins]: https://github.com/wooorm/unified-engine/blob/master/doc/options.md#optionsplugins
-
-[injected-plugins]: https://github.com/wooorm/unified-engine/blob/master/doc/options.md#optionsinjectedplugins
