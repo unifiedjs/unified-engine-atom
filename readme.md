@@ -89,9 +89,9 @@ a fatal `Error`.
 
 <!-- Definitions -->
 
-[travis-badge]: https://img.shields.io/travis/wooorm/unified-engine-atom.svg
+[travis-badge]: https://img.shields.io/travis/unifiedjs/unified-engine-atom.svg
 
-[travis]: https://travis-ci.org/wooorm/unified-engine-atom
+[travis]: https://travis-ci.org/unifiedjs/unified-engine-atom
 
 [npm]: https://docs.npmjs.com/cli/install
 
@@ -99,9 +99,9 @@ a fatal `Error`.
 
 [author]: http://wooorm.com
 
-[unified]: https://github.com/wooorm/unified
+[unified]: https://github.com/unifiedjs/unified
 
-[engine]: https://github.com/wooorm/unified-engine
+[engine]: https://github.com/unifiedjs/unified-engine
 
 [linter]: https://github.com/steelbrain/linter
 
@@ -109,28 +109,28 @@ a fatal `Error`.
 
 [messages]: https://github.com/steelbrain/linter/wiki/Linter-API#messages
 
-[unified-processor]: https://github.com/wooorm/unified#processor
+[unified-processor]: https://github.com/unifiedjs/unified#processor
 
-[processor]: https://github.com/wooorm/unified-engine/blob/master/doc/options.md#optionsprocessor
+[processor]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionsprocessor
 
-[detect-config]: https://github.com/wooorm/unified-engine/blob/master/doc/options.md#optionsdetectconfig
+[detect-config]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionsdetectconfig
 
-[rc-name]: https://github.com/wooorm/unified-engine/blob/master/doc/options.md#optionsrcname
+[rc-name]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionsrcname
 
-[package-field]: https://github.com/wooorm/unified-engine/blob/master/doc/options.md#optionspackagefield
+[package-field]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionspackagefield
 
-[rc-path]: https://github.com/wooorm/unified-engine/blob/master/doc/options.md#optionsrcpath
+[rc-path]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionsrcpath
 
-[settings]: https://github.com/wooorm/unified-engine/blob/master/doc/options.md#optionssettings
+[settings]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionssettings
 
-[detect-ignore]: https://github.com/wooorm/unified-engine/blob/master/doc/options.md#optionsdetectignore
+[detect-ignore]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionsdetectignore
 
-[ignore-name]: https://github.com/wooorm/unified-engine/blob/master/doc/options.md#optionsignorename
+[ignore-name]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionsignorename
 
-[ignore-path]: https://github.com/wooorm/unified-engine/blob/master/doc/options.md#optionsignorepath
+[ignore-path]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionsignorepath
 
-[silently-ignore]: https://github.com/wooorm/unified-engine/blob/master/doc/options.md#optionssilentlyignore
+[silently-ignore]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionssilentlyignore
 
-[plugin-prefix]: https://github.com/wooorm/unified-engine/blob/master/doc/options.md#optionspluginprefix
+[plugin-prefix]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionspluginprefix
 
-[plugins]: https://github.com/wooorm/unified-engine/blob/master/doc/options.md#optionsplugins
+[plugins]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionsplugins
