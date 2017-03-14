@@ -79,8 +79,8 @@ function atomEngine(options) {
 /* Transform VFile messages nested-tuple. */
 function transform(message) {
   var label = [message.source, message.ruleId].filter(Boolean);
-  var text = message.stack || undefined;
-  var html;
+  var excerpt = message.stack || undefined;
+  var description;
 
   if (label[0] && label[0] === label[1]) {
     label.pop();
@@ -88,28 +88,30 @@ function transform(message) {
 
   label = label.join(':');
 
-  if (!text) {
-    html = message.reason
+  if (!excerpt) {
+    description = message.reason
       .replace(/`([^`]+)`/g, CODE)
       .replace(/“([^”]+)”/g, CODE);
 
     if (label) {
-      html = '<span class="badge badge-flexible">' + label + '</span> ' +
-        html;
+      description = '<span class="badge badge-flexible">' + label + '</span> ' +
+        description;
     }
   }
 
   return {
-    type: {
-      true: 'Error',
-      false: 'Warning',
-      null: 'Info',
-      undefined: 'Info'
+    severity: {
+      true: 'error',
+      false: 'warning',
+      null: 'info',
+      undefined: 'info'
     }[message.fatal],
-    filePath: this.getPath(),
-    range: toRange(message.location),
-    html: html,
-    text: text
+    location: {
+      file: this.getPath(),
+      position: toRange(message.location)
+    },
+    description: description,
+    excerpt: excerpt
   };
 }
 

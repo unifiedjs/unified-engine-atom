@@ -57,5 +57,5 @@ test('unified-engine-atom', function (t) {
 });
 
 function flatten(message) {
-  return message.html || message.text;
+  return message.description || message.excerpt;
 }
