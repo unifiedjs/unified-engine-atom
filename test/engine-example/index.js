@@ -9,7 +9,7 @@ function linter() {
     grammarScopes: ['source.gfm', 'source.pfm', 'text.md'],
     name: 'remark',
     scope: 'file',
-    lintOnFly: true,
+    lintsOnChange: true,
     lint: engine({
       processor: require('../../node_modules/remark'),
       rcName: '.remarkrc',

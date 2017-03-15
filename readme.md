@@ -22,7 +22,7 @@ module.exports.provideLinter = function () {
     grammarScopes: ['source.gfm', 'source.pfm', 'text.md'],
     name: 'remark',
     scope: 'file',
-    lintOnFly: true,
+    lintsOnChange: true,
     lint: engine({
       processor: require('remark'),
       rcName: '.remarkrc',
@@ -39,7 +39,7 @@ module.exports.provideLinter = function () {
 ### `engine(options)`
 
 Create a `lint` function for use in an AtomLinter package.  Read more
-about linters in the [Linter-API Wiki][wiki].
+about linters in the [Linter Docs][docs].
 
 ###### `options`
 
@@ -105,9 +105,9 @@ a fatal `Error`.
 
 [linter]: https://github.com/steelbrain/linter
 
-[wiki]: https://github.com/steelbrain/linter/wiki/Linter-API
+[docs]: https://github.com/steelbrain/linter/tree/master/docs
 
-[messages]: https://github.com/steelbrain/linter/wiki/Linter-API#messages
+[messages]: https://github.com/steelbrain/linter/blob/master/docs/types/linter-message-v2.md
 
 [unified-processor]: https://github.com/unifiedjs/unified#processor
 
