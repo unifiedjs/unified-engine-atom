@@ -16,7 +16,8 @@
   "bugs": "https://github.com/unifiedjs/unified-engine-atom/issues",
   "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
   "contributors": [
-    "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)"
+    "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
+    "Jonathan Haines <jonno.haines@gmail.com>"
   ],
   "dependencies": {
     "find-root": "^1.0.0",
