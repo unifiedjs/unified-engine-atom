@@ -101,7 +101,7 @@ function transform(message) {
       position: toRange(message.location)
     },
     excerpt: excerpt + ' (' + label + ')',
-    description: excerpt + ' (**' + label + '**)'
+    description: message.note
   };
 }
 

@@ -45,8 +45,8 @@ test('unified-engine-atom', function (t) {
       t.deepEqual(
         messages.map(flatten),
         [
-          'Remove 1 line before node (**remark-lint:no-consecutive-blank-lines**)',
-          'Link to unknown heading: `heading` (**remark-validate-links**)'
+          'Remove 1 line before node (remark-lint:no-consecutive-blank-lines)',
+          'Link to unknown heading: `heading` (remark-validate-links)'
         ],
         'should emit messages'
       );
