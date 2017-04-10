@@ -48,7 +48,9 @@ function atomEngine(options) {
       cwd = findRoot(cwd);
     } catch (err) { /* empty */ }
 
-    return new Promise((resolve, reject) => {
+    return new Promise(executor);
+
+    function executor(resolve, reject) {
       file.contents = editor.getText();
 
       try {
@@ -70,7 +72,7 @@ function atomEngine(options) {
 
         resolve(file.messages.map(transform, editor));
       });
-    });
+    }
   }
 }
 
