@@ -12,8 +12,6 @@ var engine = require('unified-engine');
 /* Expose. */
 module.exports = atomEngine;
 
-var CODE = '<code>$1</code>';
-
 /* `lint`. */
 function atomEngine(options) {
   return lint;
@@ -80,7 +78,6 @@ function atomEngine(options) {
 function transform(message) {
   var label = [message.source, message.ruleId].filter(Boolean);
   var excerpt = message.stack || undefined;
-  var description;
 
   if (label[0] && label[0] === label[1]) {
     label.pop();
@@ -89,14 +86,7 @@ function transform(message) {
   label = label.join(':');
 
   if (!excerpt) {
-    description = message.reason
-      .replace(/`([^`]+)`/g, CODE)
-      .replace(/“([^”]+)”/g, CODE);
-
-    if (label) {
-      description = '<span class="badge badge-flexible">' + label + '</span> ' +
-        description;
-    }
+    excerpt = message.reason.replace(/“([^”]+)”/g, '`$1`');
   }
 
   return {
@@ -110,8 +100,8 @@ function transform(message) {
       file: this.getPath(),
       position: toRange(message.location)
     },
-    description: description,
-    excerpt: excerpt
+    excerpt: excerpt + ' (' + label + ')',
+    description: excerpt + ' (**' + label + '**)'
   };
 }
 
