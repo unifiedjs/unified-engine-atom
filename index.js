@@ -91,6 +91,10 @@ function transform(message) {
     excerpt = message.reason.replace(/“([^”]+)”/g, '`$1`');
   }
 
+  if (label) {
+    excerpt += ' (' + label + ')';
+  }
+
   return {
     severity: {
       true: 'error',
@@ -102,7 +106,7 @@ function transform(message) {
       file: this.getPath(),
       position: toRange(message.location)
     },
-    excerpt: excerpt + ' (' + label + ')',
+    excerpt: excerpt,
     description: message.note
   };
 }
