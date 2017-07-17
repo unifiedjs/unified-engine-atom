@@ -41,37 +41,62 @@ module.exports.provideLinter = function () {
 Create a `lint` function for use in an AtomLinter package.  Read more
 about linters in the [Linter Docs][docs].
 
-###### `options`
+##### `options`
 
-*   [`processor`][processor] ([`Processor`][unified-processor], required)
-    — Unified processor to transform files.
-*   [`rcName`][rc-name] (`string`, optional)
-    — Name of configuration files to load.
-*   [`packageField`][package-field] (`string`, optional)
-    — Property at which configuration can be found in `package.json`
-    files.
-*   [`detectConfig`][detect-config] (`boolean`, default: whether
-    `rcName` or `packageField` is given)
-    — Whether to search for configuration files.
-*   [`rcPath`][rc-path] (`string`, optional)
-    — File-path to a configuration file to load.
-*   [`settings`][settings] (`Object`, optional)
-    — Configuration for the parser and compiler of the processor.
-*   [`ignoreName`][ignore-name] (`string`, optional)
-    — Name of ignore files to load.
-*   [`detectIgnore`][detect-ignore] (`boolean`, default: whether
-    `ignoreName` is given)
-    — Whether to search for ignore files.
-*   [`ignorePath`][ignore-path] (`string`, optional)
-    — File-path to an ignore file to load.
-*   [`silentlyIgnore`][silently-ignore] (`boolean`, default: `false`)
-    — Skip given files if they are ignored.
-*   [`plugins`][plugins] (`Object`, optional)
-    — Map of plug-in names or paths and options to use.
-*   [`pluginPrefix`][plugin-prefix] (`string`, optional)
-    — When given, optional prefix to use when searching for plug-ins.
+###### [`options.processor`][processor]
 
-###### Returns
+Unified processor to transform files ([`Processor`][unified-processor],
+required).
+
+###### [`options.rcName`][rc-name]
+
+Name of configuration files to load (`string`, optional).
+
+###### [`options.packageField`][package-field]
+
+Property at which configuration can be found in `package.json` files (`string`,
+optional).
+
+###### [`options.detectConfig`][detect-config]
+
+Whether to search for configuration files (`boolean`, default: whether `rcName`
+or `packageField` is given).
+
+###### [`options.rcPath`][rc-path]
+
+File-path to a configuration file to load (`string`, optional).
+
+###### [`options.settings`][settings]
+
+Configuration for the parser and compiler of the processor (`Object`, optional).
+
+###### [`options.ignoreName`][ignore-name]
+
+Name of ignore files to load (`string`, optional).
+
+###### [`options.detectIgnore`][detect-ignore]
+
+Whether to search for ignore files (`boolean`, default: whether
+`ignoreName` is given).
+
+###### [`options.ignorePath`][ignore-path]
+
+File-path to an ignore file to load (`string`, optional).
+
+###### [`options.silentlyIgnore`][silently-ignore]
+
+Skip given files if they are ignored (`boolean`, default: `false`).
+
+###### [`options.plugins`][plugins]
+
+Map of plug-in names or paths and options to use (`Object`, optional).
+
+###### [`options.pluginPrefix`][plugin-prefix]
+
+When given, optional prefix to use when searching for plug-ins (`string`,
+optional).
+
+##### Returns
 
 `Function` — Can be used as `provider.lint`, where `provider` is the
 returned value of `provideLinter`.  This function takes an Atom `Editor`
