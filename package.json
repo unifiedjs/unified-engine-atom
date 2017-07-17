@@ -1,6 +1,6 @@
 {
   "name": "unified-engine-atom",
-  "version": "5.0.1",
+  "version": "5.1.0",
   "description": "Create Atom Linters for unified processors",
   "license": "MIT",
   "keywords": [
