@@ -9,15 +9,15 @@
     "unified",
     "processor"
   ],
-  "files": [
-    "index.js"
-  ],
-  "repository": "https://github.com/unifiedjs/unified-engine-atom",
+  "repository": "unifiedjs/unified-engine-atom",
   "bugs": "https://github.com/unifiedjs/unified-engine-atom/issues",
   "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
   "contributors": [
     "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
     "Jonathan Haines <jonno.haines@gmail.com>"
+  ],
+  "files": [
+    "index.js"
   ],
   "dependencies": {
     "find-root": "^1.0.0",
@@ -45,6 +45,8 @@
     "esnext": false
   },
   "remarkConfig": {
-    "plugins": ["preset-wooorm"]
+    "plugins": [
+      "preset-wooorm"
+    ]
   }
 }
