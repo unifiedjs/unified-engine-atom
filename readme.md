@@ -108,6 +108,14 @@ a fatal `Error`.
 *   [ ] If anyone knows how to add coverage to Atom tests, I’d love to
     hear about it.
 
+## Contribute
+
+See [`contribute.md` in `unifiedjs/unified`][contribute] for ways to get
+started.
+
+This organisation has a [Code of Conduct][coc].  By interacting with this
+repository, organisation, or community you agree to abide by its terms.
+
 ## License
 
 [MIT][license] © [Titus Wormer][author]
@@ -159,3 +167,7 @@ a fatal `Error`.
 [plugin-prefix]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionspluginprefix
 
 [plugins]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionsplugins
+
+[contribute]: https://github.com/unifiedjs/unified/blob/master/contributing.md
+
+[coc]: https://github.com/unifiedjs/unified/blob/master/code-of-conduct.md
