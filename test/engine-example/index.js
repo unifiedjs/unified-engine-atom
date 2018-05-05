@@ -1,8 +1,8 @@
-'use strict';
+'use strict'
 
-var engine = require('../..');
+var engine = require('../..')
 
-module.exports.provideLinter = linter;
+module.exports.provideLinter = linter
 
 function linter() {
   return {
@@ -17,5 +17,5 @@ function linter() {
       ignoreName: '.remarkignore',
       pluginPrefix: 'remark'
     })
-  };
+  }
 }

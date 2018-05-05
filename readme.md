@@ -15,9 +15,11 @@ npm install unified-engine-atom
 ## Usage
 
 ```js
-var engine = require('unified-engine-atom');
+var engine = require('unified-engine-atom')
 
-module.exports.provideLinter = function () {
+module.exports.provideLinter = linter
+
+function linter() {
   return {
     grammarScopes: ['source.gfm', 'source.pfm', 'text.md'],
     name: 'remark',
@@ -30,7 +32,7 @@ module.exports.provideLinter = function () {
       ignoreName: '.remarkignore',
       pluginPrefix: 'remark'
     })
-  };
+  }
 }
 ```
 
