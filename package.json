@@ -26,12 +26,12 @@
     "xtend": "^4.0.1"
   },
   "devDependencies": {
-    "atom-tap-test-runner": "^4.0.0",
-    "remark": "^8.0.0",
-    "remark-cli": "^4.0.0",
-    "remark-preset-wooorm": "^3.0.0",
+    "atom-tap-test-runner": "^5.0.0",
+    "remark": "^9.0.0",
+    "remark-cli": "^5.0.0",
+    "remark-preset-wooorm": "^4.0.0",
     "tape": "^4.6.0",
-    "xo": "^0.18.1"
+    "xo": "^0.21.0"
   },
   "scripts": {
     "build": "remark *.md -qfo",
@@ -42,7 +42,12 @@
   "atomTestRunner": "atom-tap-test-runner",
   "xo": {
     "space": true,
-    "esnext": false
+    "esnext": false,
+    "rules": {
+      "no-var": "off",
+      "prefer-arrow-callback": "off",
+      "object-shorthand": "off"
+    }
   },
   "remarkConfig": {
     "plugins": [
