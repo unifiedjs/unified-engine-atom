@@ -9,6 +9,10 @@ var findRoot = require('find-root')
 var vfile = require('to-vfile')
 var engine = require('unified-engine')
 
+var root = process.cwd()
+
+var running = 0
+
 var severities = {
   true: 'error',
   false: 'warning',
@@ -30,13 +34,14 @@ function atomEngine(options) {
     var filePath = editor.getPath()
     var projects = atom.project.getPaths()
     var file = vfile(filePath)
-    var original = process.cwd()
     var matches
     var cwd
 
     if (!filePath) {
       return Promise.resolve([])
     }
+
+    running++
 
     /* Set a logical CWD. */
     matches = projects
@@ -80,7 +85,11 @@ function atomEngine(options) {
       )
 
       function onrun(err) {
-        process.chdir(original)
+        running--
+
+        if (running === 0) {
+          process.chdir(root)
+        }
 
         if (err) {
           reject(err)
