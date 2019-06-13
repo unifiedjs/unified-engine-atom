@@ -1,12 +1,13 @@
 {
   "name": "unified-engine-atom",
   "version": "7.0.1",
-  "description": "Create Atom Linters for unified processors",
+  "description": "unified engine to create an Atom Linters for a processor",
   "license": "MIT",
   "keywords": [
+    "unified",
+    "engine",
     "atom",
     "linter",
-    "unified",
     "processor"
   ],
   "repository": "unifiedjs/unified-engine-atom",
