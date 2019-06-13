@@ -11,9 +11,9 @@
   ],
   "repository": "unifiedjs/unified-engine-atom",
   "bugs": "https://github.com/unifiedjs/unified-engine-atom/issues",
-  "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
+  "author": "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
   "contributors": [
-    "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
+    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
     "Jonathan Haines <jonno.haines@gmail.com>"
   ],
   "files": [
