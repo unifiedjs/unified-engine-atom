@@ -28,7 +28,7 @@ function atomEngine(options) {
 
   // Handle on-the-fly or on-save (depending on the global atom-linter settings)
   // events.
-  // See: <https://github.com/atom-community/linter/wiki/Linter-API#messages>
+  // See: <https://github.com/steelbrain/linter/blob/master/docs/types/linter-message-v2.md>
   function lint(editor) {
     var filePath = editor.getPath()
     var projects = atom.project.getPaths()
@@ -99,29 +99,26 @@ function atomEngine(options) {
 // Transform VFile messages nested-tuple.
 function transform(message) {
   var editor = this
-  var label = [message.source, message.ruleId].filter(Boolean)
+  var origin = [message.source, message.ruleId].filter(Boolean)
   var excerpt = message.stack || undefined
 
-  if (label[0] && label[0] === label[1]) {
-    label.pop()
+  if (origin[0] && origin[0] === origin[1]) {
+    origin.pop()
   }
 
-  label = label.join(':')
+  origin = origin.join(':')
 
   if (!excerpt) {
     excerpt = message.reason.replace(/“([^”]+)”/g, '`$1`')
   }
 
-  if (label) {
-    excerpt += ' (' + label + ')'
+  if (origin) {
+    excerpt += ' (' + origin + ')'
   }
 
   return {
     severity: severities[message.fatal],
-    location: {
-      file: editor.getPath(),
-      position: toRange(message.location)
-    },
+    location: {file: editor.getPath(), position: toRange(message.location)},
     excerpt: excerpt,
     description: message.note
   }
@@ -131,12 +128,10 @@ function transform(message) {
 function toRange(location) {
   var startLine = Number(location.start.line) - 1
   var startColumn = Number(location.start.column) - 1
+  var endLine = location.end.line ? Number(location.end.line) - 1 : startLine
+  var endColumn = location.end.column
+    ? Number(location.end.column) - 1
+    : startColumn
 
-  return [
-    [startLine, startColumn],
-    [
-      location.end.line ? Number(location.end.line) - 1 : startLine,
-      location.end.column ? Number(location.end.column) - 1 : startColumn
-    ]
-  ]
+  return [[startLine, startColumn], [endLine, endColumn]]
 }
