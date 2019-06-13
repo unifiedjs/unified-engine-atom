@@ -20,16 +20,15 @@ var severities = {
   undefined: 'info'
 }
 
-/* Expose. */
 module.exports = atomEngine
 
-/* `lint`. */
+// `lint`.
 function atomEngine(options) {
   return lint
 
-  /* Handle on-the-fly or on-save (depending on the
-   * global atom-linter settings) events.
-   * See https://github.com/atom-community/linter/wiki/Linter-API#messages */
+  // Handle on-the-fly or on-save (depending on the global atom-linter settings)
+  // events.
+  // See: <https://github.com/atom-community/linter/wiki/Linter-API#messages>
   function lint(editor) {
     var filePath = editor.getPath()
     var projects = atom.project.getPaths()
@@ -43,13 +42,13 @@ function atomEngine(options) {
 
     running++
 
-    /* Set a logical CWD. */
+    // Set a logical CWD.
     matches = projects
-      /* Keep projects with `filePath` inside. */
+      // Keep projects with `file.path` inside.
       .filter(function(project) {
         return filePath.slice(0, project.length + 1) === project + path.sep
       })
-      /* Sort the longest first. */
+      // Sort the longest first.
       .sort(function(left, right) {
         return right.length - left.length
       })
@@ -58,9 +57,7 @@ function atomEngine(options) {
 
     try {
       cwd = findRoot(cwd)
-    } catch (error) {
-      /* Empty */
-    }
+    } catch (error) {}
 
     return new Promise(executor)
 
@@ -69,9 +66,7 @@ function atomEngine(options) {
 
       try {
         process.chdir(cwd)
-      } catch (error) {
-        /* Empty */
-      }
+      } catch (error) {}
 
       engine(
         xtend(options, {
@@ -101,7 +96,7 @@ function atomEngine(options) {
   }
 }
 
-/* Transform VFile messages nested-tuple. */
+// Transform VFile messages nested-tuple.
 function transform(message) {
   var editor = this
   var label = [message.source, message.ruleId].filter(Boolean)
@@ -132,8 +127,7 @@ function transform(message) {
   }
 }
 
-/* Transform a (stringified) vfile range to a linter
- * nested-tuple. */
+// Transform a (stringified) vfile range to a linter nested-tuple.
 function toRange(location) {
   var startLine = Number(location.start.line) - 1
   var startColumn = Number(location.start.column) - 1
