@@ -1,18 +1,24 @@
-# unified-engine-atom [![Build Status][travis-badge]][travis]
+# unified-engine-atom
 
-Interface for creating [Atom Linter][linter]s around
-[**unified**][unified] processors.  Wrapper around the
-[**engine**][engine] to run it from Atom.
+[![Build][build-badge]][build]
+[![Downloads][downloads-badge]][downloads]
+[![Sponsors][sponsors-badge]][collective]
+[![Backers][backers-badge]][collective]
+[![Chat][chat-badge]][chat]
 
-## Installation
+[**unified**][unified] engine to create an [Atom Linter][linter]s for a
+[processor][unified-processor].
+Wrapper around the [`unifiedjs/unified-engine`][engine] to run it from Atom.
+
+## Install
 
 [npm][]:
 
-```bash
+```sh
 npm install unified-engine-atom
 ```
 
-## Usage
+## Use
 
 ```js
 var engine = require('unified-engine-atom')
@@ -40,14 +46,14 @@ function linter() {
 
 ### `engine(options)`
 
-Create a `lint` function for use in an AtomLinter package.  Read more
-about linters in the [Linter Docs][docs].
+Create a `lint` function for use in an AtomLinter package.
+Read more about linters in the [Linter Docs][docs].
 
 ##### `options`
 
 ###### [`options.processor`][processor]
 
-Unified processor to transform files ([`Processor`][unified-processor],
+unified processor to transform files ([`Processor`][unified-processor],
 required).
 
 ###### [`options.rcName`][rc-name]
@@ -91,19 +97,23 @@ Skip given files if they are ignored (`boolean`, default: `false`).
 
 ###### [`options.plugins`][plugins]
 
-Map of plug-in names or paths and options to use (`Object`, optional).
+Map of plugin names or paths and options to use (`Object`, optional).
 
 ###### [`options.pluginPrefix`][plugin-prefix]
 
-When given, optional prefix to use when searching for plug-ins (`string`,
+When given, optional prefix to use when searching for plugins (`string`,
 optional).
+
+###### [`options.configTransform`][config-transform]
+
+Transform config files from a different schema (`Function`, optional).
 
 ##### Returns
 
-`Function` — Can be used as `provider.lint`, where `provider` is the
-returned value of `provideLinter`.  This function takes an Atom `Editor`
-instance, resolves an array of [`LinterMessages`][messages], or rejects
-a fatal `Error`.
+`Function` — Can be used as `provider.lint`, where `provider` is the returned
+value of `provideLinter`.
+This function takes an Atom `Editor` instance, resolves an array of
+[`LinterMessages`][messages], or rejects a fatal `Error`.
 
 ## Todo
 
@@ -112,11 +122,13 @@ a fatal `Error`.
 
 ## Contribute
 
-See [`contributing.md` in `unifiedjs/unified`][contributing] for ways to get
-started.
+See [`contributing.md`][contributing] in [`unifiedjs/.github`][health] for ways
+to get started.
+See [`support.md`][support] for ways to get help.
 
-This organisation has a [Code of Conduct][coc].  By interacting with this
-repository, organisation, or community you agree to abide by its terms.
+This project has a [Code of Conduct][coc].
+By interacting with this repository, organisation, or community you agree to
+abide by its terms.
 
 ## License
 
@@ -124,11 +136,33 @@ repository, organisation, or community you agree to abide by its terms.
 
 <!-- Definitions -->
 
-[travis-badge]: https://img.shields.io/travis/unifiedjs/unified-engine-atom.svg
+[build-badge]: https://img.shields.io/travis/unifiedjs/unified-engine-atom.svg
 
-[travis]: https://travis-ci.org/unifiedjs/unified-engine-atom
+[build]: https://travis-ci.org/unifiedjs/unified-engine-atom
+
+[downloads-badge]: https://img.shields.io/npm/dm/unified-engine-atom.svg
+
+[downloads]: https://www.npmjs.com/package/unified-engine-atom
+
+[sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
+
+[backers-badge]: https://opencollective.com/unified/backers/badge.svg
+
+[collective]: https://opencollective.com/unified
+
+[chat-badge]: https://img.shields.io/badge/join%20the%20community-on%20spectrum-7b16ff.svg
+
+[chat]: https://spectrum.chat/unified
 
 [npm]: https://docs.npmjs.com/cli/install
+
+[health]: https://github.com/unifiedjs/.github
+
+[contributing]: https://github.com/unifiedjs/.github/blob/master/contributing.md
+
+[support]: https://github.com/unifiedjs/.github/blob/master/support.md
+
+[coc]: https://github.com/unifiedjs/.github/blob/master/code-of-conduct.md
 
 [license]: license
 
@@ -170,6 +204,4 @@ repository, organisation, or community you agree to abide by its terms.
 
 [plugins]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionsplugins
 
-[contributing]: https://github.com/unifiedjs/unified/blob/master/contributing.md
-
-[coc]: https://github.com/unifiedjs/unified/blob/master/code-of-conduct.md
+[config-transform]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionsconfigtransform
