@@ -119,6 +119,7 @@ function transform(message) {
   return {
     severity: severities[message.fatal],
     location: {file: editor.getPath(), position: toRange(message.location)},
+    url: message.url || undefined,
     excerpt: excerpt,
     description: message.note
   }
