@@ -58,7 +58,7 @@ function atomEngine(options) {
 
     try {
       cwd = findRoot(cwd)
-    } catch (err) {
+    } catch (error) {
       /* Empty */
     }
 
@@ -69,7 +69,7 @@ function atomEngine(options) {
 
       try {
         process.chdir(cwd)
-      } catch (err) {
+      } catch (error) {
         /* Empty */
       }
 
