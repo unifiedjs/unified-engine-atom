@@ -45,11 +45,11 @@ function atomEngine(options) {
     // Set a logical CWD.
     matches = projects
       // Keep projects with `file.path` inside.
-      .filter(function(project) {
+      .filter(function (project) {
         return filePath.slice(0, project.length + 1) === project + path.sep
       })
       // Sort the longest first.
-      .sort(function(left, right) {
+      .sort(function (left, right) {
         return right.length - left.length
       })
 
@@ -57,7 +57,7 @@ function atomEngine(options) {
 
     try {
       cwd = findRoot(cwd)
-    } catch (error) {}
+    } catch (_) {}
 
     return new Promise(executor)
 
@@ -66,7 +66,7 @@ function atomEngine(options) {
 
       try {
         process.chdir(cwd)
-      } catch (error) {}
+      } catch (_) {}
 
       engine(
         xtend(options, {
@@ -134,5 +134,8 @@ function toRange(location) {
     ? Number(location.end.column) - 1
     : startColumn
 
-  return [[startLine, startColumn], [endLine, endColumn]]
+  return [
+    [startLine, startColumn],
+    [endLine, endColumn]
+  ]
 }
