@@ -27,8 +27,7 @@
   "dependencies": {
     "find-root": "^1.0.0",
     "to-vfile": "^6.0.0",
-    "unified-engine": "^7.0.0",
-    "xtend": "^4.0.1"
+    "unified-engine": "^7.0.0"
   },
   "devDependencies": {
     "atom-tap-test-runner": "^7.0.0",

@@ -4,7 +4,6 @@
 
 var path = require('path')
 var PassThrough = require('stream').PassThrough
-var xtend = require('xtend')
 var findRoot = require('find-root')
 var vfile = require('to-vfile')
 var engine = require('unified-engine')
@@ -69,7 +68,7 @@ function atomEngine(options) {
       } catch (_) {}
 
       engine(
-        xtend(options, {
+        Object.assign({}, options, {
           output: false,
           out: false,
           streamError: new PassThrough(),
