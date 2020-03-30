@@ -1,6 +1,6 @@
 {
   "name": "unified-engine-atom",
-  "version": "8.0.0",
+  "version": "9.0.0",
   "description": "unified engine to create an Atom Linters for a processor",
   "license": "MIT",
   "keywords": [
