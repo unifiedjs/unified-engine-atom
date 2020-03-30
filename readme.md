@@ -91,6 +91,16 @@ Whether to search for ignore files (`boolean`, default: whether
 
 File-path to an ignore file to load (`string`, optional).
 
+###### [`options.ignorePathResolveFrom`][ignore-path-resolve-from]
+
+Whether to resolve patterns in `ignorePath` relative to its directory or the
+current working directory  (`'dir'` or `'cwd'`, default: `'dir'`).
+
+###### [`options.ignorePatterns`][ignore-patterns]
+
+Extra patterns to ignore in combination with `ignorePath` or found ignores
+(`Array.<string>`, optional).
+
 ###### [`options.silentlyIgnore`][silently-ignore]
 
 Skip given files if they are ignored (`boolean`, default: `false`).
@@ -197,6 +207,10 @@ abide by its terms.
 [ignore-name]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionsignorename
 
 [ignore-path]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionsignorepath
+
+[ignore-path-resolve-from]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionsignorepathresolvefrom
+
+[ignore-patterns]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionsignorepatterns
 
 [silently-ignore]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionssilentlyignore
 
