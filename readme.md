@@ -168,11 +168,11 @@ abide by its terms.
 
 [health]: https://github.com/unifiedjs/.github
 
-[contributing]: https://github.com/unifiedjs/.github/blob/master/contributing.md
+[contributing]: https://github.com/unifiedjs/.github/blob/HEAD/contributing.md
 
-[support]: https://github.com/unifiedjs/.github/blob/master/support.md
+[support]: https://github.com/unifiedjs/.github/blob/HEAD/support.md
 
-[coc]: https://github.com/unifiedjs/.github/blob/master/code-of-conduct.md
+[coc]: https://github.com/unifiedjs/.github/blob/HEAD/code-of-conduct.md
 
 [license]: license
 
@@ -184,38 +184,38 @@ abide by its terms.
 
 [linter]: https://github.com/steelbrain/linter
 
-[docs]: https://github.com/steelbrain/linter/tree/master/docs
+[docs]: https://github.com/steelbrain/linter/tree/HEAD/docs
 
-[messages]: https://github.com/steelbrain/linter/blob/master/docs/types/linter-message-v2.md
+[messages]: https://github.com/steelbrain/linter/blob/HEAD/docs/types/linter-message-v2.md
 
 [unified-processor]: https://github.com/unifiedjs/unified#processor
 
-[processor]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionsprocessor
+[processor]: https://github.com/unifiedjs/unified-engine/blob/HEAD/doc/options.md#optionsprocessor
 
-[detect-config]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionsdetectconfig
+[detect-config]: https://github.com/unifiedjs/unified-engine/blob/HEAD/doc/options.md#optionsdetectconfig
 
-[rc-name]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionsrcname
+[rc-name]: https://github.com/unifiedjs/unified-engine/blob/HEAD/doc/options.md#optionsrcname
 
-[package-field]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionspackagefield
+[package-field]: https://github.com/unifiedjs/unified-engine/blob/HEAD/doc/options.md#optionspackagefield
 
-[rc-path]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionsrcpath
+[rc-path]: https://github.com/unifiedjs/unified-engine/blob/HEAD/doc/options.md#optionsrcpath
 
-[settings]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionssettings
+[settings]: https://github.com/unifiedjs/unified-engine/blob/HEAD/doc/options.md#optionssettings
 
-[detect-ignore]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionsdetectignore
+[detect-ignore]: https://github.com/unifiedjs/unified-engine/blob/HEAD/doc/options.md#optionsdetectignore
 
-[ignore-name]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionsignorename
+[ignore-name]: https://github.com/unifiedjs/unified-engine/blob/HEAD/doc/options.md#optionsignorename
 
-[ignore-path]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionsignorepath
+[ignore-path]: https://github.com/unifiedjs/unified-engine/blob/HEAD/doc/options.md#optionsignorepath
 
-[ignore-path-resolve-from]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionsignorepathresolvefrom
+[ignore-path-resolve-from]: https://github.com/unifiedjs/unified-engine/blob/HEAD/doc/options.md#optionsignorepathresolvefrom
 
-[ignore-patterns]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionsignorepatterns
+[ignore-patterns]: https://github.com/unifiedjs/unified-engine/blob/HEAD/doc/options.md#optionsignorepatterns
 
-[silently-ignore]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionssilentlyignore
+[silently-ignore]: https://github.com/unifiedjs/unified-engine/blob/HEAD/doc/options.md#optionssilentlyignore
 
-[plugin-prefix]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionspluginprefix
+[plugin-prefix]: https://github.com/unifiedjs/unified-engine/blob/HEAD/doc/options.md#optionspluginprefix
 
-[plugins]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionsplugins
+[plugins]: https://github.com/unifiedjs/unified-engine/blob/HEAD/doc/options.md#optionsplugins
 
-[config-transform]: https://github.com/unifiedjs/unified-engine/blob/master/doc/options.md#optionsconfigtransform
+[config-transform]: https://github.com/unifiedjs/unified-engine/blob/HEAD/doc/options.md#optionsconfigtransform

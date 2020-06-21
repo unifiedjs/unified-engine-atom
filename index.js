@@ -27,7 +27,7 @@ function atomEngine(options) {
 
   // Handle on-the-fly or on-save (depending on the global atom-linter settings)
   // events.
-  // See: <https://github.com/steelbrain/linter/blob/master/docs/types/linter-message-v2.md>
+  // See: <https://github.com/steelbrain/linter/blob/HEAD/docs/types/linter-message-v2.md>
   function lint(editor) {
     var filePath = editor.getPath()
     var projects = atom.project.getPaths()
