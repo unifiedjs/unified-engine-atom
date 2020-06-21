@@ -32,14 +32,14 @@
   "devDependencies": {
     "atom-tap-test-runner": "^7.0.0",
     "prettier": "^2.0.0",
-    "remark": "^11.0.0",
-    "remark-cli": "^7.0.0",
-    "remark-preset-wooorm": "^6.0.0",
-    "tape": "^4.0.0",
-    "xo": "^0.28.0"
+    "remark": "^12.0.0",
+    "remark-cli": "^8.0.0",
+    "remark-preset-wooorm": "^7.0.0",
+    "tape": "^5.0.0",
+    "xo": "^0.32.0"
   },
   "scripts": {
-    "format": "remark \"*.md\" -qfo && prettier --write \"**/*.js\" && xo --fix",
+    "format": "remark \"*.md\" -qfo && prettier . --write && xo --fix",
     "test-api": "atom --test test",
     "test": "npm run format && npm run test-api"
   },
@@ -54,7 +54,11 @@
   },
   "xo": {
     "prettier": true,
-    "esnext": false
+    "esnext": false,
+    "rules": {
+      "unicorn/no-fn-reference-in-iterator": "off",
+      "unicorn/prefer-optional-catch-binding": "off"
+    }
   },
   "remarkConfig": {
     "plugins": [
