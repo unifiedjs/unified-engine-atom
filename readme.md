@@ -146,9 +146,9 @@ abide by its terms.
 
 <!-- Definitions -->
 
-[build-badge]: https://img.shields.io/travis/unifiedjs/unified-engine-atom.svg
+[build-badge]: https://github.com/unifiedjs/unified-engine-atom/workflows/main/badge.svg
 
-[build]: https://travis-ci.org/unifiedjs/unified-engine-atom
+[build]: https://github.com/unifiedjs/unified-engine-atom/actions
 
 [downloads-badge]: https://img.shields.io/npm/dm/unified-engine-atom.svg
 
